@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1: UNICODE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header>
+        <h1>Project 1: UNICODE</h1>
+    </header>
+
+    <!-- =========================
+         MAIN CONTAINER
+    ========================== -->
+    <div class="container">
+
+        <!-- =========================
+             NAVIGATION
+        ========================== -->
+        <nav>
+            <a href="index.html">Course</a>
+            <a href="project.html">Project</a>
+            <a href="concept.html">Concepts</a>
+            <a href="database.html">Database</a>
+            <a href="doc.html">Documentation</a>
+            <a href="dev.html">Dev Team</a>
+            <a href="animation.html">Animation</a>
+        </nav>
+
+        <!-- =========================
+             MAIN CONTENT AREA
+        ========================== -->
+        <main>
+            <div class="animation-section">
+                
+                <h2>Unicode Character Lookup</h2>
+
+                <!-- CONVERTER FORM -->
+                <div class="converter-form form-center">
+                    <label for="unicodeInput">Please input UNICODE number (Hex):</label>
+                    
+                    <div class="input-row">
+                        <input type="text" id="unicodeInput" placeholder="e.g. 1F926 or 0021">
+                        <div class="gate-buttons no-margin">
+                            <button type="button" onclick="convertUnicode()">Submit</button>
+                        </div>
+                    </div>
+
+                    <p class="converter-result">
+                        Unicode Symbol : <span id="unicodeOutput" class="unicode-symbol-display">-</span>
+                    </p>
+                </div>
+
+                <!-- UNICODE REFERENCE IMAGES -->
+                <div class="unicode-images">
+                    <img class="wide-img" src="uni1.jpg" alt="Unicode Emoji Table" class="unicode-chart">
+                    <img class="wide-img" src="uni3.jpg" alt="Unicode Graphic Character Table" class="unicode-chart">
+                    <img class="wide-img" src="uni4.jpg" alt="Unicode Hangul Characters Table" class="unicode-chart">
+                </div>
+
+            </div>
+        </main>
+
+        <!-- RIGHT SPACER TO CENTER CONTENT -->
+        <div class="right-space"></div>
+
+    </div>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer>
+        <p><a href="project.html">Back to Home</a></p>
+        <p>@ Powered by UB</p>
+    </footer>
+
+    <!-- =========================
+         CONVERTER SCRIPT
+    ========================== -->
+    <script>
+        function convertUnicode() {
+            let input = document.getElementById("unicodeInput").value.trim().replace(/^U\+/i, '');
+            let hexNum = parseInt(input, 16);
+
+            if (!isNaN(hexNum) && hexNum >= 0 && hexNum <= 0x10FFFF) {
+                document.getElementById("unicodeOutput").innerText = String.fromCodePoint(hexNum);
+            } else {
+                document.getElementById("unicodeOutput").innerText = "Invalid Hex Input";
+            }
+        }
+    </script>
+
+</body>
+</html>
