@@ -143,6 +143,27 @@ main img.bio-img {
     border-radius: 0;
 }
 
+/* Logic Gate Interactive Buttons */
+.gate-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.gate-buttons button {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.gate-buttons button:hover {
+    background-color: #f0f0f0;
+}
+
 /* ==========================================================================
    6. RIGHT SPACER (BALANCES NAV TO CENTER MAIN)
    ========================================================================== */
