@@ -1,147 +1,75 @@
-/* ==========================================================================
-   1. GLOBAL RESET & BASE STYLES
-   ========================================================================== */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leah Espinal - Course About</title>
+    <!-- Linked to original style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-    font-family: Arial, sans-serif;
-    color: #111111;
-    background-color: #ffffff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header>
+        <h1>Fundamentals of Computing</h1>
+    </header>
 
-/* ==========================================================================
-   2. HEADER
-   ========================================================================== */
-header {
-    height: 110px;
-    background-color: #C49DC4;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    <!-- =========================
+         MAIN CONTAINER
+    ========================== -->
+    <div class="container">
 
-header h1 {
-    font-size: 32px;
-    font-weight: bold;
-}
+        <!-- =========================
+             NAVIGATION
+        ========================== -->
+        <nav>
+            <a href="project.html">Project</a>
+            <a href="concept.html">Concepts</a>
+            <a href="database.html">Database</a>
+            <a href="doc.html">Documentation</a>
+            <a href="dev.html">Dev Team</a>
+            <a href="animations.html">Animation</a>
+        </nav>
 
-/* ==========================================================================
-   3. LAYOUT CONTAINER
-   ========================================================================== */
-.container {
-    display: flex;
-    width: 100%;
-    min-height: calc(100vh - 171px); /* Header + Footer offset */
-}
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+        <main>
+            <div class="animation-section">
 
-/* ==========================================================================
-   4. LEFT NAVIGATION
-   ========================================================================== */
-nav {
-    width: 220px;
-    flex: 0 0 220px; /* Locks width to keep layout balanced with right-space */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 30px 17px;
-    background-color: #ffffff;
-}
+                <!-- MAIN IMAGE -->
+                <div class="gate-image-container">
+                    <img src="focc.jpg" alt="Fundamentals of Computing">
+                </div>
 
-nav a {
-    color: #000000;
-    text-decoration: none;
-    background-color: #C49DC4;
-    font-size: 18px;
-    padding: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    display: block;
-}
+                <!-- COURSE DESCRIPTION -->
+                <h2>Course About:</h2>
+                <p>
+                    This course is an introduction to the fundamentals of Computer Science that 
+                    will provide students with a foundation for future courses in Computer Science. 
+                    The course is a broad survey of the discipline through topics that allow students 
+                    to understand the capabilities of computer systems in terms of: 
+                    the computer architecture; operating systems and computer networks; software 
+                    and software development; data organization and visualization; and the potential 
+                    of computing machines.
+                </p>
 
-nav a:hover {
-    text-decoration: underline;
-    background-color: #b081b0;
-}
+            </div>
+        </main>
 
-/* ==========================================================================
-   5. MAIN CONTENT AREA
-   ========================================================================== */
-main {
-    flex: 1;
-    max-width: 800px;
-    background-color: #DEC3DE;
-    padding: 30px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        <!-- Right Side Spacer -->
+        <div class="right-space"></div>
 
-.animation-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
+    </div>
 
-.animation-section h2 {
-    font-size: 24px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer>
+        <p>@ Powered by UB</p>
+    </footer>
 
-.animation-section p {
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: left;
-    max-width: 650px;
-}
-
-.gate-image-container {
-    margin-bottom: 15px;
-}
-
-main img {
-    display: block;
-    width: 350px;
-    height: 300px;
-    object-fit: cover;
-    border: 2px solid #000000;
-    border-radius: 7px;
-    background-color: #ffffff;
-}
-
-/* ==========================================================================
-   6. RIGHT SPACER (BALANCES NAV TO CENTER MAIN)
-   ========================================================================== */
-.right-space {
-    width: 220px;
-    flex: 0 0 220px;
-    background-color: #ffffff;
-}
-
-/* ==========================================================================
-   7. FOOTER
-   ========================================================================== */
-footer {
-    height: 61px;
-    background-color: #C49DC4;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: auto;
-}
-
-footer p {
-    font-size: 14px;
-}
+</body>
+</html>
