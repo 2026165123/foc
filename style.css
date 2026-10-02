@@ -270,6 +270,64 @@ main img.unicode-chart {
     background-color: #ffffff;
 }
 
+/* Machine Language Interactive Section */
+.machine-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.machine-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.machine-btn {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.machine-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.machine-btn.active {
+    background-color: #C49DC4;
+    color: #ffffff;
+}
+
+.machine-display-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.machine-explanation {
+    min-height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 12px;
+    width: 100%;
+    text-align: center;
+}
+
 /* ==========================================================================
    6. RIGHT SPACER (BALANCES NAV TO CENTER MAIN)
    ========================================================================== */
