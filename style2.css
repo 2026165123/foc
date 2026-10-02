@@ -41,8 +41,8 @@ header h1 {
    ========================================================================== */
 .container {
     display: flex;
-    flex: 1;
     width: 100%;
+    justify-content: space-between;
     min-height: calc(100vh - 160px);
 }
 
@@ -181,7 +181,8 @@ main {
 
 /* Right Spacer Layout Element */
 .right-space {
-    flex: 1;
+    width: 220px;
+    flex: 0 0 220px; /* Lock width to match left nav */
     background-color: #ffffff;
 }
 
