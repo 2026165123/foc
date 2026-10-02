@@ -1,94 +1,71 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Project 1: Not Gate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1: NOT Gate</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="not-gate-page">
-
+    <!-- =========================
+         HEADER
+    ========================== -->
     <header>
-        <h1>Project 1: Not Gate</h1>
+        <h1>Project 1: NOT Gate</h1>
     </header>
 
-    <main>
-
-         <div class="container">
-
+    <!-- =========================
+         MAIN CONTAINER
+    ========================== -->
+    <div class="container">
 
         <!-- =========================
              NAVIGATION
         ========================== -->
-
         <nav>
-
-            <a href="index.html">
-                Project
-            </a>
-
-            <a href="concept.html">
-                Concepts
-            </a>
-
-            <a href="database.html">
-                Database
-            </a>
-
-            <a href="doc.html">
-                Documentation
-            </a>
-
-            <a href="dev.html">
-                Dev Team
-            </a>
-
-            <a href="animation.html">
-                Animation
-            </a>
-
+            <a href="index.html">Course</a>
+            <a href="project.html">Project</a>
+            <a href="concept.html">Concepts</a>
+            <a href="database.html">Database</a>
+            <a href="doc.html">Documentation</a>
+            <a href="dev.html">Dev Team</a>
+            <a href="animation.html">Animation</a>
         </nav>
 
-        <div class="input">
+        <!-- =========================
+             MAIN CONTENT AREA
+        ========================== -->
+        <main>
+            <div class="animation-section">
+                
+                <h2>Final Project NOT Logic Gate</h2>
 
-            <h2>Input</h2>
+                <!-- GATE IMAGE PREVIEW -->
+                <div class="gate-image-container">
+                    <img id="myImage" src="noton2.png" alt="NOT Gate Diagram">
+                </div>
 
-            <button onclick="document.getElementById('myImage').src='noton2.png'">
-                ON
-            </button>
-
-            <button onclick="document.getElementById('myImage').src='notoff2.png'">
-                OFF
-            </button>
-
-        </div>
-
-
-        <div class="output">
-
-            <h2>Output</h2>
-
-            <div class="gate-box">
-
-                <span class="input-value"></span>
-
-                <img id="myImage" src="noton2.png">
-
-                <span class="output-value"></span>
+                <!-- INPUT BUTTONS -->
+                <div class="gate-buttons">
+                    <button type="button" onclick="document.getElementById('myImage').src='noton2.png'">0 (OFF)</button>
+                    <button type="button" onclick="document.getElementById('myImage').src='notoff2.png'">1 (ON)</button>
+                </div>
 
             </div>
+        </main>
 
-        </div>
+        <!-- RIGHT SPACER TO CENTER CONTENT -->
+        <div class="right-space"></div>
 
-    </main>
+    </div>
 
-
+    <!-- =========================
+         FOOTER
+    ========================== -->
     <footer>
-
-        <a href="project.html">Back to Home</a>
-
+        <p><a href="project.html">Back to Home</a></p>
         <p>@ Powered by UB</p>
-
     </footer>
 
 </body>
