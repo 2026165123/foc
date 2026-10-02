@@ -1,118 +1,147 @@
-/* Reset default browser spacing */
+/* ==========================================================================
+   1. GLOBAL RESET & BASE STYLES
+   ========================================================================== */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    color: #111;
+    color: #111111;
+    background-color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* Header */
+/* ==========================================================================
+   2. HEADER
+   ========================================================================== */
 header {
     height: 110px;
     background-color: #C49DC4;
-    color: white;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 header h1 {
-    margin: 0;
     font-size: 32px;
     font-weight: bold;
 }
 
-/* Main page layout */
+/* ==========================================================================
+   3. LAYOUT CONTAINER
+   ========================================================================== */
 .container {
     display: flex;
     width: 100%;
-    min-height: calc(100vh - 171px);
-    background-color: white;
+    min-height: calc(100vh - 171px); /* Header + Footer offset */
 }
 
-/* Left navigation */
+/* ==========================================================================
+   4. LEFT NAVIGATION
+   ========================================================================== */
 nav {
-    width: 200px;
-    flex: 0 0 200px; /* Lock width to match right space */
+    width: 220px;
+    flex: 0 0 220px; /* Locks width to keep layout balanced with right-space */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 17px;
-    background-color: white;
+    padding: 30px 17px;
+    background-color: #ffffff;
 }
 
 nav a {
     color: #000000;
     text-decoration: none;
     background-color: #C49DC4;
-    font-size: 20px;
-    padding: 6px 12px;
-    margin-bottom: 35px;
-    display: inline-block;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 20px;
     text-align: center;
+    display: block;
 }
 
 nav a:hover {
     text-decoration: underline;
-    background-color: #C49DC4;
+    background-color: #b081b0;
 }
 
-/* Main content (Centered middle column) */
+/* ==========================================================================
+   5. MAIN CONTENT AREA
+   ========================================================================== */
 main {
     flex: 1;
     max-width: 800px;
-    min-height: 596px;
-    margin: 0 auto;
     background-color: #DEC3DE;
-    padding: 20px;
+    padding: 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animation-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.animation-section h2 {
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.animation-section p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    max-width: 650px;
+}
+
+.gate-image-container {
+    margin-bottom: 15px;
 }
 
 main img {
     display: block;
     width: 350px;
     height: 300px;
-    margin: 0 auto 17px auto;
-    border: 2px solid #000;
-    border-radius: 7px;
     object-fit: cover;
+    border: 2px solid #000000;
+    border-radius: 7px;
+    background-color: #ffffff;
 }
 
-main h3 {
-    margin-top: 70px;
-    margin-bottom: 20px;
-}
-
-main p {
-    margin: 0;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-/* Empty space on the right (Matches nav width to center main) */
+/* ==========================================================================
+   6. RIGHT SPACER (BALANCES NAV TO CENTER MAIN)
+   ========================================================================== */
 .right-space {
-    width: 200px;
-    flex: 0 0 200px;
-    background-color: white;
+    width: 220px;
+    flex: 0 0 220px;
+    background-color: #ffffff;
 }
 
-/* Footer */
+/* ==========================================================================
+   7. FOOTER
+   ========================================================================== */
 footer {
     height: 61px;
     background-color: #C49DC4;
-    color: white;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
     margin-top: auto;
 }
 
 footer p {
-    margin: 0;
+    font-size: 14px;
 }
