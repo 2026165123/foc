@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1: Binary to Hexadecimal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header>
+        <h1>Project 1: Binary to Hexadecimal</h1>
+    </header>
+
+    <!-- =========================
+         MAIN CONTAINER
+    ========================== -->
+    <div class="container">
+
+        <!-- =========================
+             NAVIGATION
+        ========================== -->
+        <nav>
+            <a href="index.html">Course</a>
+            <a href="project.html">Project</a>
+            <a href="concept.html">Concepts</a>
+            <a href="database.html">Database</a>
+            <a href="doc.html">Documentation</a>
+            <a href="dev.html">Dev Team</a>
+            <a href="animation.html">Animation</a>
+        </nav>
+
+        <!-- =========================
+             MAIN CONTENT AREA
+        ========================== -->
+        <main>
+            <div class="animation-section">
+                
+                <h2>Binary to Hexadecimal Converter</h2>
+
+                <div class="converter-container">
+                    
+                    <!-- CONVERSION CHART IMAGE -->
+                    <img src="hexchart.png" alt="Binary to Hexadecimal Reference Chart" class="converter-chart">
+
+                    <!-- CONVERTER FORM -->
+                    <div class="converter-form">
+                        <input type="text" id="binaryInput" placeholder="e.g. 1010" maxlength="4">
+                        <label for="binaryInput">Enter any 4 digit binary number:</label>
+                        
+                        <div class="gate-buttons">
+                            <button type="button" onclick="convertBinaryToHex()">Submit</button>
+                        </div>
+
+                        <p class="converter-result">
+                            Hexadecimal Value : <span id="hexOutput">-</span>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+        <!-- RIGHT SPACER TO CENTER CONTENT -->
+        <div class="right-space"></div>
+
+    </div>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer>
+        <p><a href="project.html">Back to Home</a></p>
+        <p>@ Powered by UB</p>
+    </footer>
+
+    <!-- =========================
+         CONVERTER SCRIPT
+    ========================== -->
+    <script>
+        function convertBinaryToHex() {
+            let binaryStr = document.getElementById("binaryInput").value.trim();
+            
+            // Check for valid 4-bit binary input
+            if (/^[01]{1,4}$/.test(binaryStr)) {
+                let decimalVal = parseInt(binaryStr, 2);
+                let hexVal = decimalVal.toString(16).toUpperCase();
+                document.getElementById("hexOutput").innerText = hexVal;
+            } else {
+                document.getElementById("hexOutput").innerText = "Invalid Input";
+            }
+        }
+    </script>
+
+</body>
+</html>
