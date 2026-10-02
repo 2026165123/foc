@@ -87,11 +87,6 @@
                 </h2>
 
 
-                <p>
-                    This is an animation of an AND Logic Gate
-                </p>
-
-
 
                 <!-- =========================
                      AND GATE IMAGE
@@ -101,9 +96,9 @@
 
                     <img
                         id="gateImage"
-                        src="images/and2off1.png"
+                        src="and2off1.png"
                         alt="AND Logic Gate"
-                    >
+                        >
 
                 </div>
 
@@ -186,51 +181,31 @@
 
     <script>
 
-        function changeGate(input) {
+        <script>
 
-            /*
-             * Get the image from the HTML
-             */
-            const gateImage =
-                document.getElementById("gateImage");
+    function changeGate(input) {
 
+        const gateImage = document.getElementById("gateImage");
 
-            /*
-             * Change the image depending
-             * on the selected inputs.
-             */
-
-            if (input === "00") {
-
-                gateImage.src = "images/and2off1.png";
-
-            }
-
-
-            else if (input === "01") {
-
-                gateImage.src = "images/andoffon1.png";
-
-            }
-
-
-            else if (input === "10") {
-
-                gateImage.src = "images/andonoff1.png";
-
-            }
-
-
-            else if (input === "11") {
-
-                gateImage.src = "images/and2on1.png";
-
-            }
-
+        if (input === "00") {
+            gateImage.src = "and2off1.png";
         }
 
-    </script>
+        else if (input === "01") {
+            gateImage.src = "andoffon1.png";
+        }
 
+        else if (input === "10") {
+            gateImage.src = "andonoff1.png";
+        }
+
+        else if (input === "11") {
+            gateImage.src = "and2on1.png";
+        }
+
+    }
+
+</script>
 
 </body>
 
