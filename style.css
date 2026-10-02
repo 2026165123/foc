@@ -231,6 +231,45 @@ main img.unicode-chart {
     background-color: #ffffff;
 }
 
+/* Unicode Page Layout Helpers */
+.form-center {
+    align-items: center;
+    text-align: center;
+}
+
+.input-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.no-margin {
+    margin-top: 0;
+}
+
+.unicode-symbol-display {
+    font-size: 28px;
+}
+
+.unicode-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+main img.unicode-chart {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    object-fit: contain;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
 /* ==========================================================================
    6. RIGHT SPACER (BALANCES NAV TO CENTER MAIN)
    ========================================================================== */
