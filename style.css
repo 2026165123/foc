@@ -164,6 +164,17 @@ main img.bio-img {
     background-color: #f0f0f0;
 }
 
+/* Add to Section 5 in style.css */
+.input-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.gate-buttons-spaced {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
 /* ==========================================================================
    6. RIGHT SPACER (BALANCES NAV TO CENTER MAIN)
    ========================================================================== */
