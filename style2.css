@@ -8,9 +8,9 @@
 }
 
 body {
-    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #222;
+    font-family: Arial, sans-serif;
+    color: #111111;
+    background-color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -20,20 +20,17 @@ body {
    2. HEADER
    ========================================================================== */
 header {
-    height: 100px;
+    height: 110px;
     background-color: #C49DC4;
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 30px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+    font-size: 32px;
+    font-weight: bold;
 }
 
 /* ==========================================================================
@@ -42,54 +39,52 @@ header h1 {
 .container {
     display: flex;
     width: 100%;
-    min-height: calc(100vh - 160px);
+    min-height: calc(100vh - 171px); /* Accounts for header and footer heights */
 }
 
 /* ==========================================================================
-   4. SIDEBAR NAVIGATION (LEFT)
+   4. LEFT NAVIGATION
    ========================================================================== */
 nav {
     width: 220px;
-    flex: 0 0 220px; /* Fixed width */
-    background-color: #ffffff;
-    padding: 30px 15px;
+    flex: 0 0 220px; /* Locks width to keep layout balanced */
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    border-right: 1px solid #e2e2e2;
+    justify-content: flex-start;
+    padding: 30px 17px;
+    background-color: #ffffff;
 }
 
 nav a {
-    display: block;
-    padding: 12px 16px;
-    background-color: #C49DC4;
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 6px;
-    transition: all 0.2s ease-in-out;
+    background-color: #C49DC4;
+    font-size: 20px;
+    padding: 8px;
+    margin-bottom: 25px;
     text-align: center;
+    display: block;
 }
 
-nav a:hover,
-nav a.active {
-    background-color: #a272a2;
-    transform: translateX(4px);
-    box-shadow: 0 4px 10px rgba(196, 157, 196, 0.4);
+nav a:hover {
+    text-decoration: underline;
+    background-color: #b081b0;
 }
 
 /* ==========================================================================
-   5. MAIN CONTENT AREA (CENTERED)
+   5. MAIN CONTENT AREA (PERFECTLY CENTERED)
    ========================================================================== */
 main {
-    flex: 1; /* Automatically expands to take up ALL center space */
+    flex: 1; /* Takes up all available space between nav and right-space */
+    max-width: 800px;
     background-color: #DEC3DE;
-    padding: 40px 30px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    margin: 0 auto; /* Keeps main strictly centered */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers gate image and controls horizontally */
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .animation-section {
@@ -97,107 +92,88 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
 }
 
 .animation-section h2 {
     font-size: 24px;
-    color: #2c2c2c;
     margin-bottom: 25px;
+    text-align: center;
 }
 
-/* Logic Gate Image Container */
+/* Gate Image Container */
 .gate-image-container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-.gate-image-container img {
+main img {
     display: block;
-    width: 360px;
-    height: 280px;
+    width: 350px;
+    height: 300px;
     object-fit: contain;
-    border: 2px solid #222222;
-    border-radius: 8px;
+    border: 2px solid #000000;
+    border-radius: 7px;
+    background-color: #ffffff;
 }
 
-/* ==========================================================================
-   6. INTERACTIVE BUTTONS
-   ========================================================================== */
+/* Interactive Buttons */
 .buttons {
     display: flex;
-    flex-wrap: wrap;
+    gap: 10px;
     justify-content: center;
-    gap: 12px;
-    margin-bottom: 30px;
-    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    position: relative;
+    z-index: 10;
 }
 
-.gate-btn {
-    background-color: #ffffff;
-    color: #333333;
-    border: 2px solid #C49DC4;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 6px;
+.buttons button {
     cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 8px 14px;
+    font-size: 14px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
 }
 
-.gate-btn:hover {
-    background-color: #C49DC4;
-    color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.gate-btn.active {
-    background-color: #8c528c;
-    color: #ffffff;
-    border-color: #8c528c;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Back Link */
-.back-link a {
-    color: #4a2d4a;
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 15px;
-    transition: color 0.2s;
-}
-
-.back-link a:hover {
-    text-decoration: underline;
-    color: #111111;
+.buttons button:hover {
+    background-color: #e2d2e2;
 }
 
 /* ==========================================================================
-   7. RIGHT SPACER (BALANCES THE SIDEBAR WIDTH)
+   6. RIGHT SPACER (BALANCES THE NAV TO CENTER MAIN)
    ========================================================================== */
 .right-space {
     width: 220px;
-    flex: 0 0 220px; /* Exact match to left sidebar width */
+    flex: 0 0 220px; /* Exactly matches nav width */
     background-color: #ffffff;
-    border-left: 1px solid #e2e2e2;
 }
 
 /* ==========================================================================
-   8. FOOTER
+   7. FOOTER
    ========================================================================== */
 footer {
-    height: 60px;
+    height: 61px;
     background-color: #C49DC4;
     color: #ffffff;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
-    font-weight: 500;
+    gap: 4px;
     margin-top: auto;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+footer a:hover {
+    color: #222222;
+}
+
+footer p {
+    font-size: 14px;
 }
