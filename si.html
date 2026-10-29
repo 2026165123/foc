@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+  <title>Odd Sum</title>
+</head>
+<body>
+
+<!-- convert to ask for 1 number and give all the sum of all even numbers inclusive of the number given. -->
+
+<p> Enter a number: </p>
+
+  <input type="number" id="num1">
+  <button onclick="sum()">=</button>
+ 
+<p>The sum of all odd numbers is: </p>
+
+  <h2 id="result"></h2>
+
+  <script>
+    function sum(){
+      let n1 = +num1.value;
+	  let sum = 0;
+	  let i = 1;
+	  while (i <= n1){
+		sum = sum + i;
+		i += 2;
+	  }
+		let resultElement = document.getElementById('result');
+		resultElement.textContent = sum;
+     
+    }
+  </script>
+
+</body>
+</html>
